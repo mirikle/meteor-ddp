@@ -89,7 +89,7 @@ MeteorDdp.prototype._resolveNoSub = function(data) {
 MeteorDdp.prototype._resolveCall = function(data) {
   if (data.error) {
     this.defs[data.id].reject(data.error.reason);
-  } else if (typeof data.result !== 'undefined') {
+  } else /*if (typeof data.result !== 'undefined')*/ {
     this.defs[data.id].resolve(data.result);
   }
 };
